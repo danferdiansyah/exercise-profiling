@@ -54,3 +54,11 @@
 ![image](https://github.com/user-attachments/assets/f31e9869-1f84-4f78-8866-e264e28abe49)
 
 ![image](https://github.com/user-attachments/assets/076b4da9-1fea-4bf7-a79b-bbb367ecd377)
+
+`highest-gpa` endpoint
+
+![image](https://github.com/user-attachments/assets/0ed498f3-2d68-43a8-89b4-7707535bd149)
+
+![image](https://github.com/user-attachments/assets/c9413177-83f1-4898-8bc0-dcf19a2b0da2)
+
+![image](https://github.com/user-attachments/assets/af541124-e2dd-4231-8658-fa9dd2846f96)
