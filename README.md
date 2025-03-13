@@ -63,6 +63,16 @@
 
 ![image](https://github.com/user-attachments/assets/af541124-e2dd-4231-8658-fa9dd2846f96)
 
+**Conclusion**
+
+Dapat dilihat setelah adanya optimisasi dengan refacoring beberapa method, performa untuk ketiga endpoint meningkat drastis.
+
+- Endpoint `all-student` menjadi lebih cepat **4200% sampai 4800%**. Refactoring secara signifikan dilakukan pada method `getAllStudentsWithCourses()`
+  
+- Endpoint `all-student-name` menjadi lebih cepat **15% sampai 20%**. Tidak banyak hal yang bisa dioptimize, tapi tetap ada optimasi cukup pada method `joinStudentNames()`
+
+- Endpoint `highest-gpa` menjadi lebih cepat **hingga 262.5%**. 
+ 
 ## Reflection
 
 1. Perbedaan utama antara pengujian performa dengan *JMeter* dan *profiling* dengan *IntelliJ Profiler* adalah pendekatannya. *JMeter* digunakan untuk melakukan uji load dan stres dengan mensimulasikan banyak pengguna sekaligus untuk mengukur kinerja aplikasi dalam skenario dunia nyata. Sedangkan *IntelliJ Profiler* digunakan untuk menganalisis penggunaan CPU, memori, dan thread di dalam aplikasi untuk menemukan bagian kode yang tidak efisien atau menjadi *bottleneck*.  
