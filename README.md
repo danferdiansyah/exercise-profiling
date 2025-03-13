@@ -47,4 +47,10 @@
 
 ![Screenshot 2025-03-13 150750](https://github.com/user-attachments/assets/722ca179-82f6-4afb-8ec9-580a4e6ddb68)
 
+`all-student-name` endpoint
 
+![image](https://github.com/user-attachments/assets/fa1dbf9d-d171-4f92-acfc-4175a203f310)
+
+![image](https://github.com/user-attachments/assets/f31e9869-1f84-4f78-8866-e264e28abe49)
+
+![image](https://github.com/user-attachments/assets/076b4da9-1fea-4bf7-a79b-bbb367ecd377)
