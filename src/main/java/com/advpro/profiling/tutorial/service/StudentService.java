@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * @author muhammad.khadafi
@@ -25,17 +27,26 @@ public class StudentService {
 
     public List<StudentCourse> getAllStudentsWithCourses() {
         List<Student> students = studentRepository.findAll();
-        List<StudentCourse> studentCourses = new ArrayList<>();
-        for (Student student : students) {
-            List<StudentCourse> studentCoursesByStudent = studentCourseRepository.findByStudentId(student.getId());
-            for (StudentCourse studentCourseByStudent : studentCoursesByStudent) {
-                StudentCourse studentCourse = new StudentCourse();
-                studentCourse.setStudent(student);
-                studentCourse.setCourse(studentCourseByStudent.getCourse());
-                studentCourses.add(studentCourse);
-            }
+        List<Long> studentIds = students.stream()
+                .map(Student::getId)
+                .collect(Collectors.toList());
+
+        // Fetch all student courses in a single query
+        List<StudentCourse> allStudentCourses = studentCourseRepository.findByStudentIdIn(studentIds);
+
+        // Create a map of student IDs to students for quick lookup
+        Map<Long, Student> studentMap = students.stream()
+                .collect(Collectors.toMap(Student::getId, student -> student));
+
+        List<StudentCourse> result = new ArrayList<>();
+        for (StudentCourse studentCourse : allStudentCourses) {
+            StudentCourse newStudentCourse = new StudentCourse();
+            newStudentCourse.setStudent(studentMap.get(studentCourse.getStudent().getId()));
+            newStudentCourse.setCourse(studentCourse.getCourse());
+            result.add(newStudentCourse);
         }
-        return studentCourses;
+
+        return result;
     }
 
     public Optional<Student> findStudentWithHighestGpa() {
@@ -60,4 +71,3 @@ public class StudentService {
         return result.substring(0, result.length() - 2);
     }
 }
-
