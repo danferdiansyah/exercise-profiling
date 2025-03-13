@@ -34,3 +34,17 @@
 ![Screenshot 2025-03-13 144705](https://github.com/user-attachments/assets/40fd6c72-5d84-40c1-a3ee-d2e8ce71ccf5)
 
 ![Screenshot 2025-03-13 144827](https://github.com/user-attachments/assets/237e8e19-593b-4233-a535-32e658f30475)
+
+---
+
+After Optimization
+
+`all-student` endpoint
+
+![Screenshot 2025-03-13 150552](https://github.com/user-attachments/assets/76befd8c-317f-4de5-abfc-31d84584a590)
+
+![Screenshot 2025-03-13 150726](https://github.com/user-attachments/assets/fd884541-7e27-47c0-92d5-168b3b3098ad)
+
+![Screenshot 2025-03-13 150750](https://github.com/user-attachments/assets/722ca179-82f6-4afb-8ec9-580a4e6ddb68)
+
+
